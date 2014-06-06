@@ -31,6 +31,7 @@ class grafanadash::dev() {
    } ->
    # super hacky but for some reason the graphite database is coming up
    # as locked until we restart apache?
+   exec { '/bin/sleep 10':
+   } ->
    exec { '/sbin/service httpd restart': }
-
 }
