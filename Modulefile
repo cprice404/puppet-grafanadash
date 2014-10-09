@@ -1,5 +1,5 @@
 name 'cprice404-grafanadash'
-version '0.0.4'
+version '0.0.5'
 source 'git clone https://github.com/cprice404/puppet-grafanadash'
 author 'Chris Price'
 license 'Mozilla Public License Version 2.0'
