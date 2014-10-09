@@ -12,4 +12,4 @@ Usage:
 
     puppet apply -e 'include grafanadash::dev'
 
-Graphite will be started on port 80.  Grafana on port 8080.
+Graphite will be started on port 80.  Grafana on port 10000.
