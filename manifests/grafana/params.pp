@@ -10,6 +10,6 @@ class grafanadash::grafana::params {
     $graphite_port      = 80
     $elasticsearch_host = 'localhost'
     $elasticsearch_port = 9200
-    $grafana_port	= 10000
-    $grafana_host 	= 'localhost'
+    $grafana_port       = 10000
+    $grafana_host       = 'localhost'
 }
