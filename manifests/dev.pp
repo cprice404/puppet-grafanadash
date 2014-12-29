@@ -1,6 +1,8 @@
 class grafanadash::dev() {
    # hack; there is probably a module for this
-   exec { '/usr/sbin/setenforce 0': }
+   exec { '/usr/sbin/setenforce 0':
+      unless => '/usr/sbin/getenforce | grep -c Disabled'
+   }
 
    # this is stupid, for anything other than dev
    service { 'iptables':
@@ -32,6 +34,7 @@ class grafanadash::dev() {
    # super hacky but for some reason the graphite database is coming up
    # as locked until we restart apache?
    exec { '/bin/sleep 10':
-   } ->
-   exec { '/sbin/service httpd restart': }
+      unless => "/usr/bin/wget -q -O /dev/null http://${::graphite::gr_web_servername}:${::graphite::gr_apache_port}",
+      notify => Service['httpd'],
+   }
 }
