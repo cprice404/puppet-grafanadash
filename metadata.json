@@ -1,0 +1,17 @@
+{
+  "name": "cprice404-grafanadash",
+  "version": "0.0.6",
+  "source": "git clone https://github.com/cprice404/puppet-grafanadash",
+  "author": "Chris Price",
+  "license": "Mozilla Public License Version 2.0",
+  "summary": "Grafana Dashboard module",
+  "description": "Installs graphite and grafana",
+  "project_page": "https://github.com/cprice404/puppet-grafanadash",
+
+  "dependencies": [
+    { "name": "dwerder/graphite", "version_requirement": "5.16.1" },
+    { "name": "gini/archive", "version_requirement": "0.2.0" },
+    { "name": "stahnma/epel", "version_requirement": "0.0.6" },
+    { "name": "elasticsearch/elasticsearch", "version_requirement": "0.3.2"}
+  ]
+}
